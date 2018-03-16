@@ -17,7 +17,7 @@
                     <ul class="list-unstyled mt-3">
                       <li class="media">
                         <a href="">
-                            <img class="d-flex mr-3" src="images/1.png" alt="Generic placeholder image">
+                            <img class="d-flex mr-3" src="" alt="Generic placeholder image">
                         </a>
                         <div class="media-body">
                             <h2 class="mt-0 mb-1">Validating Product Ideas</h2>
@@ -30,7 +30,7 @@
                       </li>
                       <li class="media">
                         <a href="">
-                            <img class="d-flex mr-3" src="images/2.png" alt="Generic placeholder image">
+                            <img class="d-flex mr-3" src="" alt="Generic placeholder image">
                         </a>
                         <div class="media-body">
                             <h2 class="mt-0 mb-1">Show Your Work!: 10 Ways to Share Your Creativity and Get Discovered</h2>
@@ -43,7 +43,7 @@
                       </li>
                       <li class="media">
                         <a href="">
-                            <img class="d-flex mr-3" src="images/3.png" alt="Generic placeholder image">
+                            <img class="d-flex mr-3" src="" alt="Generic placeholder image">
                         </a>
                         <div class="media-body">
                             <h2 class="mt-0 mb-1">List-based media object</h2>
@@ -56,7 +56,7 @@
                       </li>
                       <li class="media">
                         <a href="">
-                            <img class="d-flex mr-3" src="images/1.png" alt="Generic placeholder image">
+                            <img class="d-flex mr-3" src="" alt="Generic placeholder image">
                         </a>
                         <div class="media-body">
                             <h2 class="mt-0 mb-1">Validating Product Ideas</h2>
@@ -69,7 +69,7 @@
                       </li>
                       <li class="media">
                         <a href="">
-                            <img class="d-flex mr-3" src="images/3.png" alt="Generic placeholder image">
+                            <img class="d-flex mr-3" src="" alt="Generic placeholder image">
                         </a>
                         <div class="media-body">
                             <h2 class="mt-0 mb-1">Show Your Work!: 10 Ways to Share Your Creativity and Get Discovered</h2>
@@ -82,7 +82,7 @@
                       </li>
                       <li class="media">
                         <a href="">
-                            <img class="d-flex mr-3" src="images/2.png" alt="Generic placeholder image">
+                            <img class="d-flex mr-3" src="" alt="Generic placeholder image">
                         </a>
                         <div class="media-body">
                             <h2 class="mt-0 mb-1">Validating Product Ideas</h2>
@@ -95,7 +95,7 @@
                       </li>
                       <li class="media">
                         <a href="">
-                            <img class="d-flex mr-3" src="images/3.png" alt="Generic placeholder image">
+                            <img class="d-flex mr-3" src="" alt="Generic placeholder image">
                         </a>
                         <div class="media-body">
                             <h2 class="mt-0 mb-1">Validating Product Ideas</h2>
@@ -108,7 +108,7 @@
                       </li>
                       <li class="media">
                         <a href="">
-                            <img class="d-flex mr-3" src="images/1.png" alt="Generic placeholder image">
+                            <img class="d-flex mr-3" src="" alt="Generic placeholder image">
                         </a>
                         <div class="media-body">
                             <h2 class="mt-0 mb-1">Show Your Work!</h2>
@@ -121,7 +121,7 @@
                       </li>
                       <li class="media">
                         <a href="">
-                            <img class="d-flex mr-3" src="images/2.png" alt="Generic placeholder image">
+                            <img class="d-flex mr-3" src="" alt="Generic placeholder image">
                         </a>
                         <div class="media-body">
                             <h2 class="mt-0 mb-1">Show Your Work!: 10 Ways to Share Your Creativity and Get Discovered</h2>
@@ -134,7 +134,7 @@
                       </li>
                       <li class="media">
                         <a href="">
-                            <img class="d-flex mr-3" src="images/2.png" alt="Generic placeholder image">
+                            <img class="d-flex mr-3" src="" alt="Generic placeholder image">
                         </a>
                         <div class="media-body">
                             <h2 class="mt-0 mb-1">Show Your Work!: 10 Ways to Share Your Creativity and Get Discovered</h2>
@@ -147,7 +147,7 @@
                       </li>
                       <li class="media">
                         <a href="">
-                            <img class="d-flex mr-3" src="images/2.png" alt="Generic placeholder image">
+                            <img class="d-flex mr-3" src="" alt="Generic placeholder image">
                         </a>
                         <div class="media-body">
                             <h2 class="mt-0 mb-1">Show Your Work!: 10 Ways to Share Your Creativity and Get Discovered</h2>
@@ -164,11 +164,14 @@
 
             <span class="col-lg-4">
                 <div class="sidebar">
-                    <div class="article pt-0">
+                    <div class="article w-100 pt-0">
                         <h2 class="mb-3">Kde a kdy?</h2>
-                        <a href="https://www.google.cz/maps/place/Pra%C5%BEsk%C3%A9+kreativn%C3%AD+centrum/@50.0865911,14.4192914,18.75z/data=!4m5!3m4!1s0x470b94e9398a9f61:0xa6aa23079a25ab79!8m2!3d50.086606!4d14.4198376" target="blank">
+                        {# <a href="https://www.google.cz/maps/place/Pra%C5%BEsk%C3%A9+kreativn%C3%AD+centrum/@50.0865911,14.4192914,18.75z/data=!4m5!3m4!1s0x470b94e9398a9f61:0xa6aa23079a25ab79!8m2!3d50.086606!4d14.4198376" target="blank">
                             <img src="images/layer-1.png" class="img-sidebar">
-                        </a>
+                        </a> #}
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <div class="embed-responsive-item" id="map"></div>
+                        </div>
                     </div>
                     <div class="article d-flex">
                         <div class="icon">
@@ -207,4 +210,135 @@
         </div><!-- row -->
 
     </div>
+{% endblock %}
+
+{% block footerJs %}
+    <script>
+        function initMap() {
+            var location = { lat: 50.0871196, lng: 14.4200954 };
+            var map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 17,
+                    center: location,
+                    fullscreenControl: true,
+                    scaleControl: true,
+                    rotateControl: true,
+                    mapTypeControl: false,
+                    streetViewControl: true,
+                    mapTypeId: 'roadmap',
+                    styles: [{
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "blue"
+                            }]
+                        },
+{
+                            "elementType": "labels.icon",
+                            "stylers": [{
+                                "visibility": "off"
+                            }]
+                        },
+                        {
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#616161"
+                            }]
+                        },
+                        {
+                            "elementType": "labels.text.stroke",
+                            "stylers": [{
+                                "color": "#f5f5f5"
+                            }]
+                        },
+                        {
+                            "featureType": "administrative.land_parcel",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#bdbdbd"
+                            }]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#eeeeee"
+                            }]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#757575"
+                            }]
+                        },
+                        {
+                            "featureType": "poi.park",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#e5e5e5"
+                            }]
+                        },
+                        {
+                            "featureType": "poi.park",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#9e9e9e"
+                            }]
+                        },
+                        {
+                            "featureType": "road",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#ffffff"
+                            }]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#757575"
+                            }]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#dadada"
+                            }]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#616161"
+                            }]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#9e9e9e"
+                            }]
+                        },
+                        {
+                            "featureType": "transit.line",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#e5e5e5"
+                            }]
+                        },
+                    ]
+                },
+            );
+            var marker = new google.maps.Marker(
+                {
+                    position: location,
+                    map: map,
+                    draggable: true,
+                }
+            );
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhhmS_yOg49HSVZLVQo6A0rBHgWey4bk4&amp;callback=initMap">
+    </script>
 {% endblock %}
